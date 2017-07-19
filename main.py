@@ -6,13 +6,18 @@ def main():
 		for line in f:
 			topics.append(line);
 	maxvalue = len(topics) - 1
-	print(maxvalue)
-	rng = random.randint(0, maxvalue)
-	print(topics[rng].strip())
+	print("Questions found:", maxvalue)
+	rn = random.randint(0, maxvalue)
+	rn2 = get_non_dupe_question(topics, [rn])
+	print("Your randomly chosen non-duplicating questions: ")
+	print(topics[rn].strip())
+	print(topics[rn2].strip())
+
+def get_non_dupe_question(topics, dupes):
+	maxvalue = len(topics) - 1
 	while True:
-		rng2 = random.randint(0, maxvalue)
-		if rng2 != rng:
-			break
-	print(topics[rng2].strip())
+		rn = random.randint(0, maxvalue)
+		if not dupes.__contains__(rn):
+			return rn
 
 if __name__ == '__main__':main()
