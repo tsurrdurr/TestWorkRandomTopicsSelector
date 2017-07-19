@@ -1,0 +1,5 @@
+1. Performance, implementation, and management
+2. Cache, main, and secondary storage
+3. Virtual memory, paging, and segmentation
+4. Implementation of combinational and sequential circuits
+5. Optimization and analysis
